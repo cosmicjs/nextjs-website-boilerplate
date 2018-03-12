@@ -44,7 +44,6 @@ class SearchPage extends React.Component {
     let searchResult = this.state.searchResult;
     let search_results = [];
     let query = value;
-    console.log("SEARHC: ",query)
     if(!!query)
     {
       objects.forEach(object => {
@@ -71,8 +70,6 @@ class SearchPage extends React.Component {
       });
     }
     searchResult = search_results;
-    // debugger;
-    console.log("MUSAL ", search_results)
     this.setState({searchResult}, () => console.log(this.state.searchResult));
   }
 

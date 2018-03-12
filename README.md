@@ -34,4 +34,11 @@ npm run development
 Go to [http://localhost:5000](http://localhost:5000).
 ### Config
 #### Contact email
-Because Next.js doesn't have a mail server, the contact form uses an SMTPS string to connect to your mail server of choice. To do this, add an `SMTPS_STRING` to your ENV vars in your Cosmic JS bucket.  This is located in Your Bucket > Settings > Deploy Website.  An example string looks like: `smtps://yourname%40gmail.com:yourpass@smtp.gmail.com`.
+ Contact email Because Next.js doesn't have a mail server, the contact form uses mailgun to send the email. So add the following constants in the config file.
+
+```
+env: {
+      MAILGUN_KEY :'',
+      MAILGUN_DOMAIN : ''
+    }
+```

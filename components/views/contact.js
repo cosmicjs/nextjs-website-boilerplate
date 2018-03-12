@@ -2,7 +2,6 @@ import React from 'react';
 class Faq extends React.Component {
 	render() {
         const { contact, form, formValidation, submitForm, handleChange, formStatus } = this.props;
-        console.log("FORM: ", formValidation)
 		return (
             <div className="container">
                 <div className="row">

@@ -44,7 +44,6 @@ function getBlogs() {
 
 function contactForm(data, contact) {
 
-  console.log('herer');
   if (!config.env.MAILGUN_KEY || !config.env.MAILGUN_DOMAIN) {
     return {
       status: false,
