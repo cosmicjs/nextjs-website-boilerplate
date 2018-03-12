@@ -1,0 +1,18 @@
+{
+    "env": {
+      "development": {
+        "presets": ["next/babel", "es2015", "stage-2"],
+        "plugins": [
+          ["module-resolver", { "root": ["./"] }],
+          ["inline-dotenv"]
+        ]
+      },
+      "production": {
+        "presets": ["next/babel", "es2015", "stage-2"],
+        "plugins": [
+          ["module-resolver", { "root": ["./"] }]
+        ]
+      }
+    }
+  }
+  

@@ -1,0 +1,57 @@
+{
+  "name": "medical-professional-next",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "babel-node server.js  --presets es2015 stage-2",
+    "build": "next build",
+    "start": "node server.js",
+    "export": "next build && next export",
+    "start-production": "npm run build && cross-env NODE_ENV=production npm run start",
+    "lint": "eslint --ext .js,.js ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WaqasArshad777/medical-professional-next-js.git"
+  },
+  "author": "BitBytes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WaqasArshad777/medical-professional-next-js/issues"
+  },
+  "homepage": "https://github.com/WaqasArshad777/medical-professional-next-js#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.1.2",
+    "babel-plugin-inline-dotenv": "^1.1.2",
+    "babel-plugin-module-resolver": "^3.0.0",
+    "babel-plugin-transform-define": "^1.3.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "compression": "^1.7.1",
+    "cosmicjs": "^3.1.2",
+    "cross-env": "^5.1.3",
+    "es6-promise": "^4.2.2",
+    "eslint": "^4.14.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.5.1",
+    "express": "^4.16.2",
+    "lodash": "^4.17.4",
+    "mailgun.js": "^2.0.1",
+    "next": "^4.2.1",
+    "next-routes": "^1.3.0",
+    "nodemon": "^1.14.3",
+    "nprogress": "^0.2.0",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-addons-test-utils": "^15.6.2",
+    "react-dom": "^16.2.0",
+    "styled-components": "^3.2.1"
+  }
+}
