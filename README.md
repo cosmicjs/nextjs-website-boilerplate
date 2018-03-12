@@ -1,25 +1,37 @@
-# React Auth App using Cosmic JS, React and Node
+# Next.js Website Boilerplate
+A website template that satisfies some common website requirements including dynamic pages, blog articles, author management, SEO ability, contact form and website search.  Contributions welcome!
+## Demo
+[Click here to view a demo website (Medical Professional)](https://cosmicjs.com/apps/medical-professional/demo)
+## Features
+1. Fully responsive down to mobile w/ [Bootstrap](http://getbootstrap.com) frontend<br />
+2. SEO ready<br />
+3. A contact form that sends an email to your email(s) of choice and to [Cosmic JS](https://cosmicjs.com) for easy reference<br />
+4. Full-site search functionality<br />
+5. All content is easily managed in [Cosmic JS](https://cosmicjs.com) including pages, blog and contact info.
 
-![react-auth-app-demo](screenshots/main-image.png)
+Sign up for [Cosmic JS](https://cosmicjs.com) to install the demo content and deploy this website.
 
-> Learn how to build a react auth app using cosmic.js: Login, signup, forgot password, reset password, profile, edit profile, account activation
-
-> [See live demo hosted on Cosmic JS](http://react-auth-app.cosmicapp.co/)
-
-> [Read full tutorial on the blog](https://cosmicjs.com/blog/react-auth-app-blog-demo)
-
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:3000
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production
-npm run start
+## Get started
 ```
+git clone https://github.com/WaqasArshad777/medical-professional-next-js
+cd medical-professional-next-js
+npm install
+```
+Import the `example-bucket.json` file into your Cosmic JS bucket.  To do this go to Your Bucket > Settings > Import / Export Data.
+
+![Import Bucket](https://cosmicjs.com/uploads/4edef890-52e6-11e6-9a1c-233e4e7aa20d-ZadK2PbDDR.gif "Import Bucket")
+
+### Run in production
+```
+COSMIC_BUCKET=your-bucket-slug npm start
+```
+Go to [http://localhost:3000](http://localhost:3000).
+### Run in development
+Create a `config/development.js` file and match it to `config/production.js` with your values.
+```
+npm run development
+```
+Go to [http://localhost:5000](http://localhost:5000).
+### Config
+#### Contact email
+Because Next.js doesn't have a mail server, the contact form uses an SMTPS string to connect to your mail server of choice. To do this, add an `SMTPS_STRING` to your ENV vars in your Cosmic JS bucket.  This is located in Your Bucket > Settings > Deploy Website.  An example string looks like: `smtps://yourname%40gmail.com:yourpass@smtp.gmail.com`.
