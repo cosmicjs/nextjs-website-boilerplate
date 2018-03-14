@@ -4,12 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "babel-node server.js  --presets es2015 stage-2",
+    "dev": "babel-node server.js --presets es2015 stage-2",
     "build": "next build",
-    "start": "node server.js",
-    "export": "next build && next export",
+    "start": "babel-node server.js --presets es2015 stage-2",
     "start-production": "npm run build && cross-env NODE_ENV=production npm run start",
-    "lint": "eslint --ext .js,.js ."
+    "lint": "eslint --ext .js,.js .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "heroku-postbuild": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -52,7 +53,6 @@
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-addons-test-utils": "^15.6.2",
-    "react-dom": "^16.2.0",
-    "styled-components": "^3.2.1"
+    "react-dom": "^16.2.0"
   }
 }
