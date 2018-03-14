@@ -1,8 +1,8 @@
 module.exports = {
     bucket: {
-      slug: 'medical-professional',
-      read_key: 'HKibhvkoXaPiXJnWTl65jB9t2IXyXc6TLFLMQrOrYAzDqqGqYw',
-      write_key: 'Yov9FWkW6UG3nnfMU8SVzxQ7jHKT7VkJFHc3CUKBrBY13WsrXW'
+      slug: process.env.COSMIC_BUCKET,
+      read_key: process.env.COSMIC_READ_KEY,
+      write_key: process.env.COSMIC_WRITE_KEY
     },
     env: {
       MAILGUN_KEY :'',

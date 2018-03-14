@@ -3,13 +3,11 @@ import next from 'next';
 import config from 'config';
 import compression from 'compression';
 import routes from 'routes';
-const port = parseInt(process.env.PORT, 10) || 3002
+const port = parseInt(process.env.PORT, 10) || 3000
 const dev = process.env.NODE_ENV !== 'production'
 import bodyParser from 'body-parser';
 const app = next({ dev })
 const handle = routes.getRequestHandler(app)
-// import getObjects from './common/request';
-// import sendEmail from './common/email';
 
 app.prepare()
 .then(() => {
