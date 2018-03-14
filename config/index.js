@@ -1,3 +1,4 @@
+console.log(process.env.COSMIC_READ_KEY)
 module.exports = {
     bucket: {
       slug: process.env.COSMIC_BUCKET,
