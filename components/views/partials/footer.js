@@ -14,7 +14,7 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
     const { footer, contactInfo, social } = this.props;
     return (
         <div>
-             <footer id="footer" style={{ backgroundColor: '#f8f8f8', height: '300px', borderTop: '1px solid #e7e7e7', marginTop: '5%'}}>
+             <footer id="footer" style={{ backgroundColor: '#f8f8f8', borderTop: '1px solid #e7e7e7', marginTop: '5%'}}>
             <div className="container">
                 <div className="row">
                 <div className="col-sm-8" style={{ marginTop: '50px' }}>
