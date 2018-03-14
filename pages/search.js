@@ -70,7 +70,7 @@ class SearchPage extends React.Component {
       });
     }
     searchResult = search_results;
-    this.setState({searchResult}, () => console.log(this.state.searchResult));
+    this.setState({searchResult});
   }
 
 	render() {

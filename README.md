@@ -4,9 +4,9 @@
 
 > Learn how to build a nextJs website using cosmic.js:
 
-> [See live demo hosted on Cosmic JS](http://react-auth-app.cosmicapp.co/)
+> [See live demo hosted on Cosmic JS](http://eb179f60-2070-11e8-89e4-db7642b320e6.cosmicapp.co)
 
-> [Read full tutorial on the blog](https://cosmicjs.com/blog/react-auth-app-blog-demo)
+> [Read full tutorial on the blog](https://cosmicjs.com/articles/nextjs-website-boilerplate-jeoea8au)
 
 ## Configs
 
