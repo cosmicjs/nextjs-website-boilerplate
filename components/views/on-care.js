@@ -4,7 +4,7 @@ class OnCare extends React.Component {
         const { onCare } = this.props;
 		return (
             <div>
-                <div class="container">
+                <div className="container">
                         <h1>{onCare.title}</h1>
                         <div dangerouslySetInnerHTML={{__html: onCare.content}} />
                 </div>
