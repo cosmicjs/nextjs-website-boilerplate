@@ -8,6 +8,14 @@
 
 > [Read full tutorial on the blog](https://cosmicjs.com/blog/react-auth-app-blog-demo)
 
+## Configs
+
+To add your mailgun cradentials got to your cosmic bucket. Click Settings and go to 'Deploy Web App'
+click 'Set Environment Variables' tab and add the following variables:
+
+key => MAILGUN_KEY  value => 'your key'
+key => MAILGUN_DOMAIN      value => 'your domain'
+
 ## Build Setup
 
 ``` bash

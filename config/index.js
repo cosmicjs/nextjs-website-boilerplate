@@ -5,7 +5,7 @@ module.exports = {
       write_key: process.env.COSMIC_WRITE_KEY
     },
     env: {
-      MAILGUN_KEY :'',
-      MAILGUN_DOMAIN : ''
+      MAILGUN_KEY : process.env.MAILGUN_KEY,
+      MAILGUN_DOMAIN : process.env.MAILGUN_DOMAIN
     }
 }
