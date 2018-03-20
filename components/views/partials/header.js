@@ -29,7 +29,7 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
                         </div>
                     </div>
                     <div className="collapse navbar-collapse" id="myNavbar">
-                        <ul className="nav navbar-nav navbar-center" >
+                        <ul className="nav navbar-nav" >
                         {
                             !!nav.metafields && nav.metafields.map((navElement,index) => (
                                 <li key={`nav_${index}`}>

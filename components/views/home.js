@@ -4,7 +4,7 @@ class Home extends React.Component {
 	render() {
         const { home } = this.props;
 		return (
-            <div className="container-fluid">
+            <div>
                <div id="myCarousel" className="carousel slide" data-ride="carousel" style={{ marginTop: '-20px' }}>
                 <ol className="carousel-indicators">
                     <li data-target="#myCarousel" data-slide-to="0" className="active"></li>
@@ -15,7 +15,7 @@ class Home extends React.Component {
                 <div className="carousel-inner" >
                 {
                     !!home.carousel && home.carousel.map((item,index) => (
-                        <div key={`carousel_${index}`} className={`item ${index===0 && 'active'}`} style={{ background: `url(${item.url})`, height: '75vh', backgroundSize:'cover', backgroundPosition:'center' }}>
+                        <div key={`carousel_${index}`} className={`item ${index===0 && 'active'}`} style={{ background: `url(${item.url})`, height: '500px', width: '100%', backgroundSize:'cover', backgroundPosition:'center' }}>
                         </div>
                     ))
                 }
@@ -30,6 +30,7 @@ class Home extends React.Component {
                     <span className="sr-only">Next</span>
                 </a>
             </div>
+            <div className="container-fluid">
         <div className="row">
             <div className="col-sm-12 text-center" style={{ marginTop: '30px', marginBottom: '50px' }}>
                 <p className="h1">{home.headline.value}</p>
@@ -40,12 +41,13 @@ class Home extends React.Component {
             <div className="container col-xs-12">
             {
                 !!home.blurbs && home.blurbs.map((blurb, index) => 
-                    <div className="col-sm-4 text-center" key={`blurb_${index}`}>
-                        <p className="h3" style={{ marginBottom: '30px' }}>{blurb.value}</p>
-                        <img src={`https://s3-us-west-2.amazonaws.com/cosmicjs/${blurb.children[0].value}`} className="img-circle"  height="300px;" width="300px;" alt="" />
-                        <p style={{ marginTop: '30px' }}>
+                    <div className="col-sm-4 text-center">
+                        <div className="h3" style={{ marginBottom: '30px' }}>{blurb.value}</div>
+                        <div className="img-circle center-block" key={`blurb_${index}`} style={{ background: `url(${`https://s3-us-west-2.amazonaws.com/cosmicjs/${blurb.children[0].value}`})`, backgroundSize:'cover', height: '300px', width: '300px' }}>
+                        </div>
+                        <div style={{ marginTop: '30px' }}>
                             {blurb.children[1].value}
-                        </p>
+                        </div>
                     </div>
                 )
             }
@@ -59,6 +61,7 @@ class Home extends React.Component {
                 <Link href="/contact" ><a className="btn btn-default">{home.call_to_action_button_text.value}</a></Link>
             </div>
         </div>
+            </div>
             </div>
 		);
 	}
