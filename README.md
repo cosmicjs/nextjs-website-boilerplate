@@ -5,7 +5,7 @@ A website template that satisfies some common website requirements including dyn
 ## Demo
 [Click here to view the demo](https://cosmicjs.com/apps/nextjs-website-boilerplate)
 
-> [Read full tutorial on the blog](https://cosmicjs.com/articles/nextjs-website-boilerplate-jeoea8au)
+> [Read how this app was built](https://cosmicjs.com/articles/nextjs-website-boilerplate-jeoea8au)
 
 ## Features
 1. Fully responsive down to mobile w/ [Bootstrap](http://getbootstrap.com) frontend<br />
