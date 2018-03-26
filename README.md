@@ -16,16 +16,6 @@ A website template that satisfies some common website requirements including dyn
 
 Sign up for [Cosmic JS](https://cosmicjs.com) to install the demo content and deploy this website.
 
-## Configs
-
-To add your [MailGun](https://www.mailgun.com/) credentials go to your Cosmic Bucket. Click Settings and go to 'Deploy Web App'
-click 'Set Environment Variables' tab and add the following variables:
-
-Key | Value
---- | ---
-| MAILGUN_KEY     | your key
-| MAILGUN_DOMAIN      | your domain
-
 ## Getting Started
 
 ```bash
@@ -42,3 +32,13 @@ npm run build
 # Run in production and serve at localhost:3000
 COSMIC_BUCKET=your-bucket-slug npm start
 ```
+
+
+## Configs
+
+After you deploy your app, to add your [MailGun](https://www.mailgun.com/) credentials go to your Cosmic Bucket Dashboard and click Settings > Deploy Web App.  Click 'Set Environment Variables' tab and add the following variables:
+
+Key | Value
+--- | ---
+| MAILGUN_KEY     | your key
+| MAILGUN_DOMAIN      | your domain
