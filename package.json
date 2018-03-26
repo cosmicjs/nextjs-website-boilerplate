@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WaqasArshad777/medical-professional-next-js.git"
+    "url": "git+https://github.com/cosmicjs/nextjs-website-boilerplate.git"
   },
   "author": "BitBytes",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/WaqasArshad777/medical-professional-next-js/issues"
+    "url": "https://github.com/cosmicjs/nextjs-website-boilerplate/issues"
   },
-  "homepage": "https://github.com/WaqasArshad777/medical-professional-next-js#readme",
+  "homepage": "https://github.com/cosmicjs/nextjs-website-boilerplate#readme",
   "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
