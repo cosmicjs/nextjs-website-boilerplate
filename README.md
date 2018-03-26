@@ -34,7 +34,7 @@ COSMIC_BUCKET=your-bucket-slug npm start
 ```
 
 
-## Configs
+## Configure
 
 After you deploy your app, to add your [MailGun](https://www.mailgun.com/) credentials go to your Cosmic Bucket Dashboard and click Settings > Deploy Web App.  Click 'Set Environment Variables' tab and add the following variables:
 
