@@ -18,7 +18,7 @@ Sign up for [Cosmic JS](https://cosmicjs.com) to install the demo content and de
 
 ## Configs
 
-To add your mailgun cradentials go to your Cosmic Bucket. Click Settings and go to 'Deploy Web App'
+To add your [MailGun](https://www.mailgun.com/) credentials go to your Cosmic Bucket. Click Settings and go to 'Deploy Web App'
 click 'Set Environment Variables' tab and add the following variables:
 ```
 key => MAILGUN_KEY  value => 'your key'
