@@ -3,7 +3,7 @@
 A website template that satisfies some common website requirements including dynamic pages, blog articles, author management, SEO ability, contact form and website search.  Contributions welcome!
 
 ## Demo
-[Click here to view a demo website (Medical Professional)](https://cosmicjs.com/apps/medical-professional/demo)
+[Click here to view the demo](https://cosmicjs.com/apps/nextjs-website-boilerplate)
 
 > [Read full tutorial on the blog](https://cosmicjs.com/articles/nextjs-website-boilerplate-jeoea8au)
 
