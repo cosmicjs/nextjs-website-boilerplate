@@ -28,7 +28,7 @@ Key | Value
 
 ## Getting Started
 
-``` bash
+```bash
 git clone https://github.com/cosmicjs/nodejs-website-boilerplate
 cd nextjs-website-boilerplate
 npm install
