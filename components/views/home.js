@@ -41,9 +41,9 @@ class Home extends React.Component {
             <div className="container col-xs-12">
             {
                 !!home.blurbs && home.blurbs.map((blurb, index) => 
-                    <div className="col-sm-4 text-center">
+                    <div key={`blurb_${index}`} className="col-sm-4 text-center">
                         <div className="h3" style={{ marginBottom: '30px' }}>{blurb.value}</div>
-                        <div className="img-circle center-block" key={`blurb_${index}`} style={{ background: `url(${`https://s3-us-west-2.amazonaws.com/cosmicjs/${blurb.children[0].value}`})`, backgroundSize:'cover', height: '300px', width: '300px' }}>
+                        <div className="img-circle center-block" style={{ background: `url(${`https://s3-us-west-2.amazonaws.com/cosmicjs/${blurb.children[0].value}`})`, backgroundSize:'cover', height: '300px', width: '300px' }}>
                         </div>
                         <div style={{ marginTop: '30px' }}>
                             {blurb.children[1].value}

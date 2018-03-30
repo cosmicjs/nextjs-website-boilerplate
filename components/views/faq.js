@@ -3,7 +3,7 @@ class Faq extends React.Component {
 	render() {
         const { faq } = this.props;
 		return (
-            <div class="container">
+            <div className="container">
                 <h1>{faq.title}</h1>
                 {
                     !!faq.faqs && faq.faqs.map((f, index) => 

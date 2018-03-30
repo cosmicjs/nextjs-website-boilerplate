@@ -43,7 +43,7 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
                                         {
                                             navElement.children.map((child, index) => 
                                                 <li key={`child_${index}`}>
-                                                    <Link href={child.value}><a>{child.title}</a></Link>
+                                                    <Link href={child.value[0] == '/' ? child.value : '/'+ child.value}><a>{child.title}</a></Link>
                                                 </li>
                                             )
                                         }
