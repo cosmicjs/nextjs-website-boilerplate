@@ -1,0 +1,7 @@
+{
+  "name": "Next.js Website Boilerplate",
+  "description": "A website boilerplate built using Next.js and Cosmic JS",
+  "repository": "https://github.com/cosmicjs/nextjs-website-boilerplate",
+  "logo": "https://cosmicjs.com/images/logo.svg",
+  "keywords": ["react", "next.js", "website"]
+}
