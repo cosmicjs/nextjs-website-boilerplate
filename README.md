@@ -19,7 +19,7 @@ Sign up for [Cosmic JS](https://cosmicjs.com) to install the demo content and de
 ## Getting Started
 
 ```bash
-git clone https://github.com/cosmicjs/nodejs-website-boilerplate
+git clone https://github.com/cosmicjs/nextjs-website-boilerplate
 cd nextjs-website-boilerplate
 npm install
 
