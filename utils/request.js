@@ -1,5 +1,6 @@
 import Cosmic from 'cosmicjs'
 import config from 'config'
+import axios from 'axios'
 
 const api = Cosmic()
 const bucket = api.bucket({
@@ -42,47 +43,41 @@ function getBlogs() {
   return bucket.getObjectsByType(params);
 }
 
-function contactForm(data, contact) {
+async function contactForm(data, contact) {
 
-  if (!config.env.MAILGUN_KEY || !config.env.MAILGUN_DOMAIN) {
+  if (!config.env.SENDGRID_FUNCTION_ENDPOINT) {
     return {
       status: false,
-      message: "You must add a MailGun api key and domain using environment variables located in Your Cosmic JS Bucket > Deploy to Web.  Contact your developer to add these values."
+      message: "You must add a SendGrid Function Endpoint URL.  Contact your developer to add this value."
     }
   } else {
-    var api_key = config.env.MAILGUN_KEY // add mailgun key
-    var domain = config.env.MAILGUN_DOMAIN // add mailgun domain
-    var mailgun = require('mailgun.js')({
-      apiKey: api_key,
-      domain: domain
-    })
-    var message = 'Name: ' + data.name + '\n\n' +
-      'Subject: ' + contact.subject + '\n\n' +
-      'Message: ' + data.message + '\n\n'
-    var mailgun_data = {
-      from: 'Your Website <me@' + domain + '>',
-      to: contact.to,
-      subject: data.name + ' sent you a new message: ' + data.message,
-      text: message
-    }
-    mailgun.messages().send(mailgun_data, function (error, body) {
-      if (error)
-        return {
-          status: false,
-          message: "You must add a MailGun api key and domain using environment variables located in Your Cosmic JS Bucket > Deploy to Web.  Contact your developer to add these values."
-        }
-      else
-        var res = saveForm(data);
-      if (res.status) {
-        return {
-          status: true,
-          message: contact.metadata.contact_form_success_message.value
-        }
+    try {
+      var message = 'Name:<br>' + data.name + '<br><br>' +
+      'Subject:<br>' + contact.metadata.subject + '<br><br>' +
+      'Message:<br>' + data.message + '<br><br>'
+      var email_data = {
+        from: data.email,
+        to: contact.metadata.to,
+        subject: data.name + ' sent you a new message',
+        text_body: message,
+        html_body: message
       }
-    })
+      const url = config.env.SENDGRID_FUNCTION_ENDPOINT
+      await axios.post(url, email_data)
+      saveForm(data)
+      return {
+        status: true,
+        message: 'Success.'
+      }
+    } catch(error) {
+      return {
+        status: false,
+        message: "You must add a SendGrid Function Endpoint URL.  Contact your developer to add this value."
+      }
+    }
   }
 
-  function saveForm(data) {
+  async function saveForm(data) {
     //Send to Cosmic
     const params = {
       type_slug: 'form-submissions',
@@ -103,14 +98,8 @@ function contactForm(data, contact) {
         }
       ]
     }
-    if (config.bucket.write_key)
-      // Write to Cosmic Bucket (Optional)
-      bucket.addObject(params, (err, response) => {
-        return res.json({
-          status: 'success',
-          data: response
-        })
-      })
+    // Write to Cosmic Bucket (Optional)
+    const response = await bucket.addObject(params)
   }
 }
 

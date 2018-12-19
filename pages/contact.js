@@ -68,13 +68,13 @@ class ContactPage extends React.Component {
     this.setState({form_validation});
     return check;
   }
-    submitForm = () => {
+    submitForm = async () => {
         var form_status = this.state.form_status;
         form_status.status = '';
         form_status.message = '';
         this.setState({ form_status });
         if (this.validateForm()) {
-            var response = Request.contactForm(this.state.form, this.state.contact_form);
+            var response = await Request.contactForm(this.state.form, this.state.contact_form);
             if (response.status) {
                 form_status.status = 'success';
                 form_status.message = response.message
