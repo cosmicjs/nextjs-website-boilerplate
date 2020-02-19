@@ -12,7 +12,7 @@ class Faq extends React.Component {
                     <div className="col-sm-6">
                             <div className={`form-group ${formValidation.name ? 'has-error' : ''}`}>
                                 <label htmlFor="name">Name</label>
-                                <input type="text" value={form.name} onChange={handleChange} placeholder="Ener your full name" name="name" className="form-control" />
+                                <input type="text" value={form.name} onChange={handleChange} placeholder="Enter your full name" name="name" className="form-control" />
                             </div>
                             <div className={`form-group ${formValidation.email ? 'has-error' : ''}`}>
                                 <label htmlFor="email">Email</label>
