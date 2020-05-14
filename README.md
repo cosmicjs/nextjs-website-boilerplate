@@ -10,11 +10,11 @@ A website template that satisfies some common website requirements including dyn
 ## Features
 1. Fully responsive down to mobile w/ [Bootstrap](http://getbootstrap.com) frontend<br />
 2. SEO ready<br />
-3. A contact form that sends an email to your email(s) of choice and to [Cosmic JS](https://cosmicjs.com) for easy reference<br />
+3. A contact form that sends an email to your email(s) of choice and to [Cosmic](https://cosmicjs.com) for easy reference<br />
 4. Full-site search functionality<br />
-5. All content is easily managed in [Cosmic JS](https://cosmicjs.com) including pages, blog and contact info.
+5. All content is easily managed in [Cosmic](https://cosmicjs.com) including pages, blog and contact info.
 
-Sign up for [Cosmic JS](https://cosmicjs.com) to install the demo content and deploy this website.
+Sign up for [Cosmic](https://cosmicjs.com) to install the demo content and deploy this website.
 
 ## Getting Started
 
@@ -32,9 +32,7 @@ npm run build
 # Run in production and serve at localhost:3000
 COSMIC_BUCKET=your-bucket-slug npm start
 ```
-Import the `bucket.json` file into your Cosmic JS Bucket.  To do this go to Your Bucket > Settings > Import / Export Data.
-
-<img src="https://cosmic-s3.imgix.net/44f0d590-0303-11e9-b4bb-b3fa3d766bf7-sendgrid.gif?w=1300" width="700" />
+Import the `bucket.json` file into your Cosmic Bucket.  To do this go to Your Bucket > Settings > Import / Export Data.
 
 ## Contact form setup
 Install and deploy the SendGrid Email Function.
