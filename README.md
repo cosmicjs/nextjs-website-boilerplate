@@ -1,4 +1,4 @@
-# Next.js Website Boilerplate
+# Next.js Website Boilerplate (Easiest way to Build your Website)
 ![nextjs-website-boilerplate](https://cosmic-s3.imgix.net/ef914540-3106-11e8-8a87-1d4e79eefafa-nextjs-cosmicjs.jpg)
 A website template that satisfies some common website requirements including dynamic pages, blog articles, author management, SEO ability, contact form and website search.  Contributions welcome!
 
